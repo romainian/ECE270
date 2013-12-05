@@ -1,0 +1,43 @@
+<?xml version='1.0' standalone='no'?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width = '700' height = '900'>
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '400.000000' y2 = '800.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '358.417664' y2 = '795.629517' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '318.652649' y2 = '782.709106' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '282.442932' y2 = '761.803406' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '251.371002' y2 = '733.826172' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '226.794876' y2 = '700.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '209.788651' y2 = '661.803406' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '201.095566' y2 = '620.905701' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '201.095566' y2 = '579.094299' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '209.788635' y2 = '538.196594' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '226.794861' y2 = '499.999939' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '251.370987' y2 = '466.173828' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '282.442932' y2 = '438.196533' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '318.652649' y2 = '417.290833' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '358.417664' y2 = '404.370361' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '400.000031' y2 = '399.999878' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '441.582397' y2 = '404.370361' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '481.347412' y2 = '417.290833' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '517.557129' y2 = '438.196533' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '548.629089' y2 = '466.173828' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '573.205200' y2 = '499.999939' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '590.211426' y2 = '538.196594' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '598.904541' y2 = '579.094299' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '598.904541' y2 = '620.905762' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '590.211426' y2 = '661.803467' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '573.205200' y2 = '700.000122' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '548.629028' y2 = '733.826233' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '517.557129' y2 = '761.803528' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '481.347351' y2 = '782.709229' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <line x1 = '400.000000' y1 = '600.000000' x2 = '441.582336' y2 = '795.629700' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <circle cx = '400.000000' cy = '600.000000' r = '200.000000' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <circle cx = '400.000000' cy = '600.000000' r = '160.000000' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <circle cx = '400.000000' cy = '600.000000' r = '128.000015' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <circle cx = '400.000000' cy = '600.000000' r = '102.400002' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <circle cx = '400.000000' cy = '600.000000' r = '81.920006' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <circle cx = '400.000000' cy = '600.000000' r = '65.536003' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <circle cx = '400.000000' cy = '600.000000' r = '52.428806' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <circle cx = '400.000000' cy = '600.000000' r = '41.943043' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <circle cx = '400.000000' cy = '600.000000' r = '33.554436' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <circle cx = '400.000000' cy = '600.000000' r = '26.843548' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+</svg>
