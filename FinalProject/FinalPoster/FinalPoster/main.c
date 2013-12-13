@@ -34,7 +34,7 @@ void largeImage(int matrix[MATRIX_HEIGHT][MATRIX_WIDTH])
         {
             if(flag!=1)
             {
-                if(matrix[i][j]==0&&(MATRIX_WIDTH-j)>=2)
+                if(matrix[i][j]==0&&(MATRIX_WIDTH-j)>=2&&(MATRIX_HEIGHT-i)>=2)
                 {
                     matrix[i][j]=2;
                     matrix[i+1][j]=2;
@@ -56,7 +56,7 @@ void largestImage(int matrix[MATRIX_HEIGHT][MATRIX_WIDTH])
         {
             if(flag!=1)
             {
-                if(matrix[i][j]==0&&(MATRIX_WIDTH-j)>=3)
+                if(matrix[i][j]==0&&(MATRIX_WIDTH-j)>=3&&(MATRIX_HEIGHT-i)>=3)
                 {
                     matrix[i][j]=3;
                     matrix[i+1][j]=3;
@@ -81,7 +81,7 @@ int main(int argc, const char * argv[])
     int M=MATRIX_WIDTH;
     int matrix[N][M];
     //SETUP MATRIX
-    printf("\n Matrix Grid");
+    printf("\nMatrix Grid");
     for(i=0;i<N;i++)
     {
         printf("\n");
@@ -101,7 +101,7 @@ int main(int argc, const char * argv[])
     largestImage(matrix);       //
     Image(matrix);              //
     //PRINT NEW MATRIX
-    printf("\n Matrix Grid");
+    printf("\nMatrix Grid");
     for(i=0;i<N;i++)
     {
         printf("\n");
