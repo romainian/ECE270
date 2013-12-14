@@ -6,6 +6,7 @@
 #define imHeight 1000
 #define matWidth 10
 #define matHeight 10
+#define classSize 100
 
 struct Student
 {
@@ -72,15 +73,16 @@ void updatePosition(int i, int j, int n, int m, int matrix[n][m], int sizeCheck)
 
 void main()
 {
-    int test;
-    
+    int test, x;
+    struct Student myStudent[classSize];
+    x=0;
     int placeMatrix[matHeight][matWidth];
     setupZeroMatrix(matHeight, matWidth, placeMatrix);
     placeMatrix[2][3]=0;
-    test =  checkPosition(1,2,matHeight,matWidth,placeMatrix, 3);
+    test =  checkPosition(1,2,matHeight,matWidth,placeMatrix, myStudent[x].size);
     if(test==0)
     {
-        updatePosition(1,2,matHeight, matWidth, placeMatrix, 3);
+        updatePosition(1,2,matHeight, matWidth, placeMatrix, myStudent[x].size);
     }
     printIntMatrix(matHeight, matWidth, placeMatrix);
 }
