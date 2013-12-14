@@ -54,7 +54,7 @@ struct Line
     float y1;
     float y2;
 };
-struct Rect
+struct Rectangle
 {
     float x;
     float y;
@@ -66,6 +66,68 @@ struct Student
     int shape;   //0 if circle. 1 if rectangle
     int size;
 };
+// SET STRUCTURE FUNCTIONS //
+void setLine(struct Line *myLine,float x1,float y1, float x2, float y2)
+{
+    myLine->x1=x1;
+    myLine->y1=y1;
+    myLine->x2=x2;
+    myLine->y2=y2;
+}
+void setCircle(struct Circle *myCircle,float cx,float cy, float r)
+{
+    
+    myCircle->x=cx;
+    myCircle->y=cy;
+    myCircle->r=r;
+}
+void setCircleArray(int Dim, struct Circle myCircle[],float cx[],float cy[], float r[])
+{
+    int i;
+    for(i=0;i<Dim;i++)
+    {
+        setCircle(&myCircle[i], cx[i], cy[i], r[i]);
+    }
+    
+}
+void setRectangle(struct Rectangle *myRectangle, int x, int y, int width, int height)
+{
+    myRectangle->x=x;
+    myRectangle->y=y;
+    myRectangle->width=width;
+    myRectangle->height=height;
+}
+void setFill(struct Fill *myFill,int r, int g, int b, float op)
+{
+    myFill->r=r;
+    myFill->g=g;
+    myFill->b=b;
+    myFill->opacity=op;
+}
+void setFillArray(int Dim, struct Fill myFill[], int red[], int green[], int blue[], float opacity[])
+{
+    int i;
+    for(i=0;i<Dim;i++)
+    {
+        setFill(&myFill[i], red[i], green[i], blue[i], opacity[i]);
+    }
+}
+void setStroke(struct Stroke *myStroke, int red,int green,int blue,int width,float op)
+{
+    myStroke->r=red;
+    myStroke->g=green;
+    myStroke->b=blue;
+    myStroke->width=width;
+    myStroke->opacity=op;
+}
+void setStrokeArray(int Dim, struct Stroke myStroke[], int red[], int green[], int blue[], int width[], float opacity[])
+{
+    int i;
+    for(i=0;i<Dim;i++)
+    {
+        setStroke(&myStroke[i], red[i], green[i], blue[i], width[i], opacity[i]);
+    }
+}
 // MATRIX //
 void setStudent(struct Student *myStudent, int shape_in, int size_in)
 {
@@ -177,6 +239,8 @@ void main()
 {
     int test, x;
     struct Student myStudent[classSize];
+    struct Fill myFill[classSize];
+    struct Stroke myStroke[classSize];
     x=0;
     int placeMatrix[matHeight][matWidth];
     setupZeroMatrix(matHeight, matWidth, placeMatrix);
