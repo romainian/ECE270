@@ -8,6 +8,7 @@
 #define matHeight 10
 #define classSize 100
 
+
 struct Student
 {
     int shape;   //0 if circle. 1 if rectangle
@@ -72,7 +73,52 @@ void updatePosition(int i, int j, int n, int m, int matrix[n][m], int sizeCheck)
 }
 void drawImage(int i, int j, struct Student myStudent, int x)
 {
-    
+    switch(x)
+    {
+        case 0:
+        {
+            int i;                          //Get_Data function and Draw_Data function
+            for(i=0;i<dim;i++)
+            {
+                fill[i].r = rand()%256;
+                fill[i].g = rand()%256;
+                fill[i].b = rand()%256;
+                fill[i].opacity = rand_float();
+            }
+            for(i=0;i<dim;i++)
+            {
+                stroke[i].r = rand()%256;
+                stroke[i].g = rand()%256;
+                stroke[i].b = rand()%256;
+                stroke[i].width = 1 + rand()%3;
+                stroke[i].opacity = rand_float();
+            }
+            int j,k;
+            for(i=0;i<dim;i++)
+            {
+                for(j=0;j<10;j++)
+                {
+                    for(k=0;k<10;k++)
+                    {
+                        rect[i].x = (imHeight/10)*j;
+                        rect[i].y = (imWidth/10)*k;
+                        rect[i].height = (imHeight/10);
+                        rect[i].width = (imWidth/10);
+                        i++;
+                    }
+                }
+            }
+            int i;
+            for (i=0; i<Dim; i++)
+            {
+                fprintf(fp,"\n    <rect x = '%f' y = '%f' width = '%f' height = '%f'", rect[i].x, rect[i].y, rect[i].width, rect[i].height);
+                fprintf(fp," fill = 'rgb(%d, %d, %d)' fill-opacity = '%f'", fill[i].r, fill[i].g, fill[i].b, fill[i].opacity);
+                fprintf(fp," stroke = 'rgb(%d, %d, %d)' stroke-opacity = '%f'", stroke[i].r, stroke[i].g, stroke[i].b, stroke[i].opacity);
+                fprintf(fp," stroke-width = '%d' />", stroke[i].width);
+            }//Get_Data function and Draw_Data function
+        }
+            
+    }
 }
 void main()
 {
