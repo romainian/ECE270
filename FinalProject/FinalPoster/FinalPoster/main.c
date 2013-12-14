@@ -8,7 +8,7 @@
 #define matHeight 10
 #define classSize 100
 FILE *fp;
-
+float cellSize = imWidth/matWidth;
 // SVG HEADER AND FOOTER //
 void writeSVGHeader(char fileName[], int width, int height)
 {
@@ -221,55 +221,21 @@ void updatePosition(int i, int j, int n, int m, int matrix[n][m], int sizeCheck)
 }
 // STUDENT FUNCTIONS //
 
-void houghton_bradley_getData(float cx_in, float cy_in, float r_in, struct Circle smiley[], struct Fill smileyFill[], struct Stroke smileyStroke[])
-{
-    float cx[]={cx_in,cx_in-(r_in/2),cx_in+(r_in/2),cx_in,cx_in};
-    float cy[]={cy_in,cy_in-(r_in/2),cy_in-(r_in/2),cy_in+(r_in/3),cy_in};
-    float r[]={r_in,r_in/6,r_in/6,r_in/2,r_in/2};
-    
-    int redFill[]={255,0,0,255,255};
-    int greenFill[]={255,0,0,255,255};
-    int blueFill[]={0,0,0,255,0};
-    float opacityFill[]={1.0,1.0,1.0,1.0,1.0};
-    
-    int redStroke[]={0,0,0,0,255};
-    int greenStroke[]={0,0,0,0,255};
-    int blueStroke[]={0,0,0,0,0};
-    int widthStroke[]={5,2,2,1,1};
-    float opacityStroke[]={1.0,1.0,1.0,1.0,1.0};
-    
-    //struct Circle smiley[5];
-    //struct Fill smileyFill[5];
-    //struct Stroke smileyStroke[5];
-    
-    setCircleArray(5, smiley, cx, cy, r);
-    setFillArray(5, smileyFill, redFill, greenFill, blueFill, opacityFill);
-    setStrokeArray(5, smileyStroke, redStroke, greenStroke, blueStroke, widthStroke, opacityStroke);
-}
-void houghton_bradley_drawImage(struct Circle myCircle[], struct Fill myFill[], struct Stroke myStroke[])
-{
-    drawCircles(5,myCircle, myFill, myStroke);
-}
-void bradleyhoughton(float cx_in, float cy_in, float r_in)
-{
-    void houghton_bradley_getData(float cx_in, float cy_in, float r_in, struct Circle smiley[], struct Fill smileyFill[], struct Stroke smileyStroke[]);
-    void houghton_bradley_drawImage(struct Circle myCircle[], struct Fill myFill[], struct Stroke myStroke[]);
-}
-void drawImage(int i, int j, struct Student myStudent, struct Fill myFill, struct Stroke myStroke, int x)
+
+void drawImage(int i, int j, struct Student myStudent, int x)
 {
     switch(x)
     {
         case 0:
         {
-            bradleyhoughton(50, 50, 50); //Get_Data function and Draw_Data function
+            drawCircle(j*cellSize+cellSize/2, i*cellSize+cellSize/2, cellSize/2, 255, 0, 0, 1.0, 0, 0, 0, 1.0, 2); //Get_Data function and Draw_Data function
         }
-            
     }
 }
 
 void main()
 {
-    int test, x;
+    int i, j, test, x;
     struct Student myStudent[classSize];
     struct Fill myFill[classSize];
     struct Stroke myStroke[classSize];
@@ -278,13 +244,19 @@ void main()
     x=0;
     writeSVGHeader("Poster.SVG", 1000, 1000);
     setupZeroMatrix(matHeight, matWidth, placeMatrix);  //SVG
-    placeMatrix[2][3]=0;
-    setStudent(&myStudent[x], 0, 2);
-    test =  checkPosition(1,2,matHeight,matWidth,placeMatrix, myStudent[x].size);
-    if(test==0)
+    setStudent(&myStudent[x], 0, 1);
+    for(i=0;i<matHeight;i++)
     {
-        updatePosition(1,2,matHeight, matWidth, placeMatrix, myStudent[x].size);
-        x++;
+        for(j=0;j<matWidth;j++)
+        {
+            test =  checkPosition(i,j,matHeight,matWidth,placeMatrix, myStudent[x].size);
+            if(test==0)
+            {
+                drawImage(i, j, myStudent[x], x);
+                updatePosition(i,j,matHeight, matWidth, placeMatrix, myStudent[x].size);
+                //x++;
+            }
+        }
     }
     printIntMatrix(matHeight, matWidth, placeMatrix);   //SVG
     writeSVGFooter();
