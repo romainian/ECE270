@@ -12,6 +12,11 @@ struct Student
     int shape;   //0 if circle. 1 if rectangle
     int size;
 };
+void setStudent(struct Student *myStudent, int shape_in, int size_in)
+{
+    myStudent->shape=shape_in;
+    myStudent->size=size_in;
+}
 void printIntMatrix(int n, int m, int matrix[n][m])
 {
     int i,j;
