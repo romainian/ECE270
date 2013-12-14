@@ -25,7 +25,6 @@ void writeSVGFooter()
 }
 // STRUCTURES //
 
-
 struct Fill
 {
     int r;
@@ -54,7 +53,7 @@ struct Line
     float y1;
     float y2;
 };
-struct Rectangle
+struct Rect
 {
     float x;
     float y;
@@ -67,6 +66,7 @@ struct Student
     int size;
 };
 // SET STRUCTURE FUNCTIONS //
+
 void setLine(struct Line *myLine,float x1,float y1, float x2, float y2)
 {
     myLine->x1=x1;
@@ -90,7 +90,7 @@ void setCircleArray(int Dim, struct Circle myCircle[],float cx[],float cy[], flo
     }
     
 }
-void setRectangle(struct Rectangle *myRectangle, int x, int y, int width, int height)
+void setRectangle(struct Rect *myRectangle, int x, int y, int width, int height)
 {
     myRectangle->x=x;
     myRectangle->y=y;
@@ -128,7 +128,40 @@ void setStrokeArray(int Dim, struct Stroke myStroke[], int red[], int green[], i
         setStroke(&myStroke[i], red[i], green[i], blue[i], width[i], opacity[i]);
     }
 }
+// DRAW FUNCTIONS //
+void drawCircle(float cx, float cy, float r,
+                int fill_r, int fill_g, int fill_b,
+                float fill_opacity, int stroke_r, int stroke_g,
+                int stroke_b, float stroke_opacity, int stroke_width)
+{
+    fprintf(fp,"\n    <circle cx = '%f' cy = '%f' r = '%f'", cx, cy, r);
+    fprintf(fp," fill = 'rgb(%d, %d, %d)' fill-opacity = '%f'",
+            fill_r, fill_g, fill_b, fill_opacity);
+    fprintf(fp," stroke = 'rgb(%d, %d, %d)' stroke-opacity = '%f'",
+            stroke_r, stroke_g, stroke_b, stroke_opacity);
+    fprintf(fp," stroke-width = '%d' />", stroke_width);
+}
+void drawLine(float x1, float y1, float x2, float y2,
+              int stroke_r, int stroke_g, int stroke_b,
+              float stroke_opacity, int stroke_width)
+{
+    fprintf(fp,"\n    <line x1 = '%f' y1 = '%f' x2 = '%f' y2 = '%f'",
+            x1, y1, x2, y2);
+    fprintf(fp," stroke = 'rgb(%d, %d, %d)' stroke-opacity = '%f'",
+            stroke_r, stroke_g, stroke_b, stroke_opacity);
+    fprintf(fp," stroke-width = '%d' />", stroke_width);
+}
+void drawRectangle(float x, float y, float width, float height,
+                   int fill_r, int fill_g, int fill_b, float fill_opacity,
+                   int stroke_r, int stroke_g, int stroke_b, float stroke_opacity, int stroke_width)
+{
+    fprintf(fp,"\n <rect x = '%f' y = '%f' width = '%f' height = '%f'", x, y, width, height);
+    fprintf(fp," fill = 'rgb(%d, %d, %d)' fill-opacity = '%f'", fill_r, fill_g, fill_b, fill_opacity);
+    fprintf(fp," stroke = 'rgb(%d, %d, %d)' stroke-opacity = '%f'", stroke_r, stroke_g, stroke_b, stroke_opacity);
+    fprintf(fp," stroke-width = '%d' />", stroke_width);
+}
 // MATRIX //
+
 void setStudent(struct Student *myStudent, int shape_in, int size_in)
 {
     myStudent->shape=shape_in;
@@ -186,64 +219,65 @@ void updatePosition(int i, int j, int n, int m, int matrix[n][m], int sizeCheck)
         }
     }
 }
-void drawImage(int i, int j, struct Student myStudent, int x)
+// STUDENT FUNCTIONS //
+
+void houghton_bradley_getData(float cx_in, float cy_in, float r_in, struct Circle smiley[], struct Fill smileyFill[], struct Stroke smileyStroke[])
+{
+    float cx[]={cx_in,cx_in-(r_in/2),cx_in+(r_in/2),cx_in,cx_in};
+    float cy[]={cy_in,cy_in-(r_in/2),cy_in-(r_in/2),cy_in+(r_in/3),cy_in};
+    float r[]={r_in,r_in/6,r_in/6,r_in/2,r_in/2};
+    
+    int redFill[]={255,0,0,255,255};
+    int greenFill[]={255,0,0,255,255};
+    int blueFill[]={0,0,0,255,0};
+    float opacityFill[]={1.0,1.0,1.0,1.0,1.0};
+    
+    int redStroke[]={0,0,0,0,255};
+    int greenStroke[]={0,0,0,0,255};
+    int blueStroke[]={0,0,0,0,0};
+    int widthStroke[]={5,2,2,1,1};
+    float opacityStroke[]={1.0,1.0,1.0,1.0,1.0};
+    
+    //struct Circle smiley[5];
+    //struct Fill smileyFill[5];
+    //struct Stroke smileyStroke[5];
+    
+    setCircleArray(5, smiley, cx, cy, r);
+    setFillArray(5, smileyFill, redFill, greenFill, blueFill, opacityFill);
+    setStrokeArray(5, smileyStroke, redStroke, greenStroke, blueStroke, widthStroke, opacityStroke);
+}
+void houghton_bradley_drawImage(struct Circle myCircle[], struct Fill myFill[], struct Stroke myStroke[])
+{
+    drawCircles(5,myCircle, myFill, myStroke);
+}
+void bradleyhoughton(float cx_in, float cy_in, float r_in)
+{
+    void houghton_bradley_getData(float cx_in, float cy_in, float r_in, struct Circle smiley[], struct Fill smileyFill[], struct Stroke smileyStroke[]);
+    void houghton_bradley_drawImage(struct Circle myCircle[], struct Fill myFill[], struct Stroke myStroke[]);
+}
+void drawImage(int i, int j, struct Student myStudent, struct Fill myFill, struct Stroke myStroke, int x)
 {
     switch(x)
     {
         case 0:
         {
-            /*int i;                          //Get_Data function and Draw_Data function
-            for(i=0;i<dim;i++)
-            {
-                fill[i].r = rand()%256;
-                fill[i].g = rand()%256;
-                fill[i].b = rand()%256;
-                fill[i].opacity = rand_float();
-            }
-            for(i=0;i<dim;i++)
-            {
-                stroke[i].r = rand()%256;
-                stroke[i].g = rand()%256;
-                stroke[i].b = rand()%256;
-                stroke[i].width = 1 + rand()%3;
-                stroke[i].opacity = rand_float();
-            }
-            int j,k;
-            for(i=0;i<dim;i++)
-            {
-                for(j=0;j<10;j++)
-                {
-                    for(k=0;k<10;k++)
-                    {
-                        rect[i].x = (imHeight/10)*j;
-                        rect[i].y = (imWidth/10)*k;
-                        rect[i].height = (imHeight/10);
-                        rect[i].width = (imWidth/10);
-                        i++;
-                    }
-                }
-            }
-            int i;
-            for (i=0; i<Dim; i++)
-            {
-                fprintf(fp,"\n    <rect x = '%f' y = '%f' width = '%f' height = '%f'", rect[i].x, rect[i].y, rect[i].width, rect[i].height);
-                fprintf(fp," fill = 'rgb(%d, %d, %d)' fill-opacity = '%f'", fill[i].r, fill[i].g, fill[i].b, fill[i].opacity);
-                fprintf(fp," stroke = 'rgb(%d, %d, %d)' stroke-opacity = '%f'", stroke[i].r, stroke[i].g, stroke[i].b, stroke[i].opacity);
-                fprintf(fp," stroke-width = '%d' />", stroke[i].width);
-            }     */    //Get_Data function and Draw_Data function
+            bradleyhoughton(50, 50, 50); //Get_Data function and Draw_Data function
         }
             
     }
 }
+
 void main()
 {
     int test, x;
     struct Student myStudent[classSize];
     struct Fill myFill[classSize];
     struct Stroke myStroke[classSize];
-    x=0;
     int placeMatrix[matHeight][matWidth];
-    setupZeroMatrix(matHeight, matWidth, placeMatrix);
+    
+    x=0;
+    writeSVGHeader("Poster.SVG", 1000, 1000);
+    setupZeroMatrix(matHeight, matWidth, placeMatrix);  //SVG
     placeMatrix[2][3]=0;
     setStudent(&myStudent[x], 0, 2);
     test =  checkPosition(1,2,matHeight,matWidth,placeMatrix, myStudent[x].size);
@@ -252,6 +286,7 @@ void main()
         updatePosition(1,2,matHeight, matWidth, placeMatrix, myStudent[x].size);
         x++;
     }
-    printIntMatrix(matHeight, matWidth, placeMatrix);
+    printIntMatrix(matHeight, matWidth, placeMatrix);   //SVG
+    writeSVGFooter();
 }
 
