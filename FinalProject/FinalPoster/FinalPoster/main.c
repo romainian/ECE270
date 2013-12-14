@@ -9,8 +9,8 @@
 
 struct Student
 {
-    int id;
-    int shape;   //0 if circle. 1 if rectangle 
+    int shape;   //0 if circle. 1 if rectangle
+    int size;
 };
 void printIntMatrix(int n, int m, int matrix[n][m])
 {
@@ -68,6 +68,7 @@ void updatePosition(int i, int j, int n, int m, int matrix[n][m], int sizeCheck)
 void main()
 {
     int test;
+    
     int placeMatrix[matHeight][matWidth];
     setupZeroMatrix(matHeight, matWidth, placeMatrix);
     placeMatrix[2][3]=0;
