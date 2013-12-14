@@ -7,6 +7,11 @@
 #define matWidth 10
 #define matHeight 10
 
+struct Student
+{
+    int id;
+    int shape;   //0 if circle. 1 if rectangle 
+};
 void printIntMatrix(int n, int m, int matrix[n][m])
 {
     int i,j;
@@ -72,6 +77,5 @@ void main()
         updatePosition(1,2,matHeight, matWidth, placeMatrix, 3);
     }
     printIntMatrix(matHeight, matWidth, placeMatrix);
-    
-    
 }
+
