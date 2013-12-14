@@ -70,7 +70,10 @@ void updatePosition(int i, int j, int n, int m, int matrix[n][m], int sizeCheck)
         }
     }
 }
-
+void drawImage(int i, int j, struct Student myStudent, int x)
+{
+    
+}
 void main()
 {
     int test, x;
@@ -79,10 +82,12 @@ void main()
     int placeMatrix[matHeight][matWidth];
     setupZeroMatrix(matHeight, matWidth, placeMatrix);
     placeMatrix[2][3]=0;
+    setStudent(&myStudent[x], 0, 2);
     test =  checkPosition(1,2,matHeight,matWidth,placeMatrix, myStudent[x].size);
     if(test==0)
     {
         updatePosition(1,2,matHeight, matWidth, placeMatrix, myStudent[x].size);
+        x++;
     }
     printIntMatrix(matHeight, matWidth, placeMatrix);
 }
