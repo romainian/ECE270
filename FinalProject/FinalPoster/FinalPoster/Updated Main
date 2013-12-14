@@ -62,8 +62,15 @@ void updatePosition(int i, int j, int n, int m, int matrix[n][m], int sizeCheck)
 
 void main()
 {
+    int test;
     int placeMatrix[matHeight][matWidth];
     setupZeroMatrix(matHeight, matWidth, placeMatrix);
+    placeMatrix[2][3]=0;
+    test =  checkPosition(1,2,matHeight,matWidth,placeMatrix, 3);
+    if(test==0)
+    {
+        updatePosition(1,2,matHeight, matWidth, placeMatrix, 3);
+    }    
     printIntMatrix(matHeight, matWidth, placeMatrix);
     
     
