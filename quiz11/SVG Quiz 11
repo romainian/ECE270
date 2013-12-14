@@ -1,0 +1,129 @@
+//
+//  main.c
+//  ISVGimage quizz11.2
+//
+//  Created by chad fields on 11/7/13.
+//  Copyright (c) 2013 chad fields. All rights reserved.
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+FILE *fp;
+
+int imWidth = 1000;
+int imHeight = 1000;
+
+struct Circle
+{
+    int cx;
+    int cy;
+    int r;
+};
+
+struct Fill
+{
+    int red;
+    int green;
+    int blue;
+    float opacity;
+};
+
+struct Stroke
+{
+    int red;
+    int green;
+    int blue;
+    int width;
+    float opacity;
+};
+
+void setFill(struct Fill *myFill, int red, int green, int blue, float opacity)
+{
+    myFill -> red = red;
+    myFill -> green = green;
+    myFill -> blue = blue;
+    myFill -> opacity = opacity;
+}
+
+void setStroke(struct Stroke *myStroke, int red, int green, int blue, int width, float opacity)
+{
+    myStroke -> red = red;
+    myStroke -> green = green;
+    myStroke -> blue = blue;
+    myStroke -> width = width;
+    myStroke -> opacity = opacity;
+}
+
+void setCircle(struct Circle *myCircle, int cx_in, int cy_in, int r_in)
+{
+    myCircle -> cx = cx_in;
+    myCircle -> cy = cy_in;
+    myCircle -> r = r_in;
+}
+
+void getCicleData(int array[])
+{
+    array[0] = 300; //Radius of the circle
+    array[1] = 500; //Starting x coordinate of the circle
+    array[2] = 500; //Starting y coordinate of the circle
+}
+
+void drawcircles(struct Circle myCircle, struct Fill myFill, struct Stroke myStroke)
+{
+    int i;
+    
+    for(i = 0; i < 10; i++)
+    {
+        fprintf(fp,"\n    <circle cx = '%d' cy = '%d' r = '%d'", myCircle.cx, myCircle.cy, myCircle.r);
+        fprintf(fp," fill = 'rgb(%d, %d, %d)' fill-opacity = '%f'", myFill.red, myFill.green, myFill.blue, myFill.opacity);
+        fprintf(fp," stroke = 'rgb(%d, %d, %d)' stroke-opacity = '%f'", myStroke.red, myStroke.green, myStroke.blue, myStroke.opacity);
+        fprintf(fp," stroke-width = '%d' />", myStroke.width);
+        
+        myCircle.r -= 25;
+        myCircle.cy -= 25;
+        myFill.red += rand() % 31;
+        myFill.green = rand() % 256;
+        myFill.blue += rand() % 31;
+    }
+}
+
+void writeSVGHeader(char fileName[], int width, int height)
+{
+    fp = fopen(fileName,"w");
+    
+    fprintf(fp,"<?xml version='1.0' standalone='no'?>");
+    fprintf(fp,"\n<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width = '%d' height = '%d'>", width, height);
+}
+
+void writeSVGFooter()
+{
+    fprintf(fp,"\n</svg>");
+    fclose(fp);
+}
+
+int main()
+{
+    srand(time(NULL));
+    
+    writeSVGHeader("structImage.svg", imWidth, imHeight);
+    
+    int array[3];
+    
+    getCicleData(array);
+    
+    struct Circle myCircle;
+    struct Fill myFill;
+    struct Stroke myStroke;
+    
+    setCircle(&myCircle, array[2], array[1], array[0]);
+    setFill(&myFill, 0, 255, 0, 1.0);
+    setStroke(&myStroke, 0, 0, 0, 1.0, 2);
+    
+    drawcircles(myCircle, myFill, myStroke);
+    
+    writeSVGFooter();
+    
+    return 0;
+}
