@@ -2500,6 +2500,7 @@ void drawImage(int i, int j, struct Student myStudent, int x)
 void main()
 {
     int i, j, test, x;
+    srand(time(NULL));
     struct Student myStudent[classSize];
     struct Fill myFill[classSize];
     struct Stroke myStroke[classSize];
