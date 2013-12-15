@@ -1,0 +1,501 @@
+
+        case   0:
+            {
+                student0(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case   1:
+            {
+                student1(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case   2:
+            {
+                student2(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case   3:
+            {
+                student3(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case   4:
+            {
+                student4(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case   5:
+            {
+                student5(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case   6:
+            {
+                student6(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case   7:
+            {
+                student7(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case   8:
+            {
+                student8(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case   9:
+            {
+                student9(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  10:
+            {
+                student10(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  11:
+            {
+                student11(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  12:
+            {
+                student12(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  13:
+            {
+                student13(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  14:
+            {
+                student14(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  15:
+            {
+                student15(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  16:
+            {
+                student16(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  17:
+            {
+                student17(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  18:
+            {
+                student18(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  19:
+            {
+                student19(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  20:
+            {
+                student20(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  21:
+            {
+                student21(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  22:
+            {
+                student22(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  23:
+            {
+                student23(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  24:
+            {
+                student24(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  25:
+            {
+                student25(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  26:
+            {
+                student26(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  27:
+            {
+                student27(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  28:
+            {
+                student28(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  29:
+            {
+                student29(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  30:
+            {
+                student30(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  31:
+            {
+                student31(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  32:
+            {
+                student32(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  33:
+            {
+                student33(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  34:
+            {
+                student34(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  35:
+            {
+                student35(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  36:
+            {
+                student36(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  37:
+            {
+                student37(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  38:
+            {
+                student38(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  39:
+            {
+                student39(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  40:
+            {
+                student40(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  41:
+            {
+                student41(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  42:
+            {
+                student42(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  43:
+            {
+                student43(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  44:
+            {
+                student44(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  45:
+            {
+                student45(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  46:
+            {
+                student46(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  47:
+            {
+                student47(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  48:
+            {
+                student48(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  49:
+            {
+                student49(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  50:
+            {
+                student50(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  51:
+            {
+                student51(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  52:
+            {
+                student52(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  53:
+            {
+                student53(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  54:
+            {
+                student54(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  55:
+            {
+                student55(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  56:
+            {
+                student56(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  57:
+            {
+                student57(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  58:
+            {
+                student58(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  59:
+            {
+                student59(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  60:
+            {
+                student60(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  61:
+            {
+                student61(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  62:
+            {
+                student62(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  63:
+            {
+                student63(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  64:
+            {
+                student64(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  65:
+            {
+                student65(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  66:
+            {
+                student66(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  67:
+            {
+                student67(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  68:
+            {
+                student68(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  69:
+            {
+                student69(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  70:
+            {
+                student70(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  71:
+            {
+                student71(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  72:
+            {
+                student72(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  73:
+            {
+                student73(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  74:
+            {
+                student74(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  75:
+            {
+                student75(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  76:
+            {
+                student76(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  77:
+            {
+                student77(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  78:
+            {
+                student78(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  79:
+            {
+                student79(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  80:
+            {
+                student80(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  81:
+            {
+                student81(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  82:
+            {
+                student82(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  83:
+            {
+                student83(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  84:
+            {
+                student84(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  85:
+            {
+                student85(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  86:
+            {
+                student86(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  87:
+            {
+                student87(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  88:
+            {
+                student88(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  89:
+            {
+                student89(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  90:
+            {
+                student90(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  91:
+            {
+                student91(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  92:
+            {
+                student92(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  93:
+            {
+                student93(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  94:
+            {
+                student94(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  95:
+            {
+                student95(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  96:
+            {
+                student96(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  97:
+            {
+                student97(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  98:
+            {
+                student98(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
+        case  99:
+            {
+                student99(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
+                break;
+            }
