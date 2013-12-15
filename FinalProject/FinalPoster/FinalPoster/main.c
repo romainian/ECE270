@@ -76,7 +76,7 @@ void setLine(struct Line *myLine,float x1,float y1, float x2, float y2)
 }
 void setCircle(struct Circle *myCircle,float cx,float cy, float r)
 {
-    
+
     myCircle->x=cx;
     myCircle->y=cy;
     myCircle->r=r;
@@ -88,7 +88,7 @@ void setCircleArray(int Dim, struct Circle myCircle[],float cx[],float cy[], flo
     {
         setCircle(&myCircle[i], cx[i], cy[i], r[i]);
     }
-    
+
 }
 void setRectangle(struct Rect *myRectangle, int x, int y, int width, int height)
 {
@@ -199,7 +199,7 @@ int checkPosition(int i, int j, int n, int m, int matrix[n][m], int sizeCheck)
     {
         for (l=j;l<j+sizeCheck;l++)
         {
-            if (matrix[k][l]!=0||(matWidth-l)<sizeCheck||(matHeight-k)<sizeCheck)
+            if (matrix[k][l]!=0||(matWidth+1-l)<sizeCheck||(matHeight+1-k)<sizeCheck)
             {
                 flag=1;
             }
@@ -224,12 +224,36 @@ void updatePosition(int i, int j, int n, int m, int matrix[n][m], int sizeCheck)
 
 void drawImage(int i, int j, struct Student myStudent, int x)
 {
+    float cx_in      = j*cellSize+myStudent.size*cellSize/2;
+    float cy_in      = i*cellSize+myStudent.size*cellSize/2;
+    float cr_in      = myStudent.size*cellSize/2;
+    float rx_in      = j*cellSize;
+    float ry_in      = i*cellSize;
+    float rWidth_in  = myStudent.size*cellSize;
+    float rHeight_in = myStudent.size*cellSize;
+
     switch(x)
     {
         case 0:
-        {
-            drawCircle(j*cellSize+cellSize/2, i*cellSize+cellSize/2, cellSize/2, 255, 0, 0, 1.0, 0, 0, 0, 1.0, 2); //Get_Data function and Draw_Data function
-        }
+            {
+                drawCircle(cx_in, cy_in, cr_in, 255, 0, 0, 1.0, 0, 0, 0, 1.0, 2); //Get_Data function and Draw_Data function
+                break;
+            }
+        case 1:
+            {
+                drawCircle(cx_in, cy_in, cr_in, 0, 255, 0, 1.0, 0, 0, 0, 1.0, 2);
+                break;
+            }
+        case 2:
+            {
+                drawCircle(cx_in, cy_in, cr_in, 0, 0, 255, 1.0, 0, 0, 0, 1.0, 2);
+                break;
+            }
+        case 3:
+            {
+                drawRectangle(rx_in, ry_in, rWidth_in, rHeight_in, 255, 255, 0, 1.0, 0, 0, 0, 1.0, 2);
+                break;
+            }
     }
 }
 
@@ -240,21 +264,25 @@ void main()
     struct Fill myFill[classSize];
     struct Stroke myStroke[classSize];
     int placeMatrix[matHeight][matWidth];
-    
+
     x=0;
     writeSVGHeader("Poster.SVG", 1000, 1000);
     setupZeroMatrix(matHeight, matWidth, placeMatrix);  //SVG
-    setStudent(&myStudent[x], 0, 1);
+    setStudent(&myStudent[0], 0, 2);
+    setStudent(&myStudent[1], 0, 2);
+    setStudent(&myStudent[2], 0, 2);
+    setStudent(&myStudent[3], 0, 2);
     for(i=0;i<matHeight;i++)
     {
         for(j=0;j<matWidth;j++)
         {
-            test =  checkPosition(i,j,matHeight,matWidth,placeMatrix, myStudent[x].size);
+            test = checkPosition(i,j,matHeight,matWidth,placeMatrix, myStudent[x].size);
             if(test==0)
             {
                 drawImage(i, j, myStudent[x], x);
                 updatePosition(i,j,matHeight, matWidth, placeMatrix, myStudent[x].size);
-                //x++;
+                x++;
+                x=x%4;
             }
         }
     }
