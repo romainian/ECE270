@@ -1,0 +1,4 @@
+void houghton_bradley_drawImage(struct Circle myCircle[], struct Fill myFill[], struct Stroke myStroke[])
+{
+    drawCircles(5,myCircle, myFill, myStroke);
+}
