@@ -83,7 +83,7 @@ void setFill(struct Fill *myFill,int r, int g, int b, float op)
     myFill->b=b;
     myFill->opacity=op;
 }
-void setStroke(struct Stroke *myStroke, int red,int green,int blue,int width,float op)
+void setStroke(struct Stroke *myStroke, int red, int green, int blue, int width, float op)
 {
     myStroke->r=red;
     myStroke->g=green;
@@ -92,14 +92,14 @@ void setStroke(struct Stroke *myStroke, int red,int green,int blue,int width,flo
     myStroke->opacity=op;
 }
 
-void setCircle(struct Circle *myCircle,float cx,float cy, float r)
+void setCircle(struct Circle *myCircle, float cx, float cy, float r)
 {
 
     myCircle->x=cx;
     myCircle->y=cy;
     myCircle->r=r;
 }
-void setLine(struct Line *myLine,float x1,float y1, float x2, float y2)
+void setLine(struct Line *myLine, float x1, float y1, float x2, float y2)
 {
     myLine->x1=x1;
     myLine->y1=y1;
@@ -234,7 +234,74 @@ void updatePosition(int i, int j, int n, int m, int matrix[n][m], int sizeCheck)
 }
 
 
-// STUDENT FUNCTIONS //
+/// ----------STUDENT FUNCTIONS---------------- ///
+
+// Student0
+//  Get Data
+void romain_aaron_getData(struct Line *myLines, struct Circle *myCircles,
+                          float cx_in, float cy_in, float r_in,
+                          int steps, int rings)
+{
+    float v[2][1] = {0,r_in};
+    float v2[2][1] = {v[0][0],v[1][0]};
+    float theta = 2*M_PI/steps;
+    float R[2][2] = {{cos(theta),-sin(theta)},{sin(theta),cos(theta)}};
+    int i;
+    for (i=0;i<steps;i++)
+    {
+        myLines[i].x1 = cx_in;
+        myLines[i].y1 = cy_in;
+        v2[0][0] = v[0][0];
+        v2[1][0] = v[1][0];
+        myLines[i].x2 = v[0][0]+cx_in;
+        myLines[i].y2 = v[1][0]+cy_in;
+        v[0][0] = R[0][0]*v2[0][0]+R[0][1]*v2[1][0];
+        v[1][0] = R[1][0]*v2[0][0]+R[1][1]*v2[1][0];
+    }
+    for (i=0;i<rings;i++)
+    {
+        myCircles[i].x = cx_in;
+        myCircles[i].y = cy_in;
+        myCircles[i].r = r_in*powf(.8,i);
+    }
+}
+//  Draw Image
+void romain_aaron_drawImage(struct Line myLines[], struct Circle myCircles[],
+                            struct Stroke myStroke, struct Fill myFill,
+                            int steps, int rings)
+{
+    int i;
+    for (i=0;i<steps;i++)
+    {
+        drawLine(myLines[i].x1, myLines[i].y1, myLines[i].x2,
+                myLines[i].y2, myStroke.r, myStroke.g,
+                myStroke.b, myStroke.opacity, myStroke.width);
+    }
+    for (i=0;i<rings;i++)
+    {
+        drawCircle(myCircles[i].x, myCircles[i].y, myCircles[i].r,
+                myFill.r, myFill.g, myFill.b, myFill.opacity,
+                myStroke.r, myStroke.g, myStroke.b, myStroke.opacity,
+                myStroke.width);
+    }
+}
+//  Student Main
+void student0(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+    int steps = 50;
+    int rings = 8;
+    struct Line myLines[steps];
+    struct Circle myCircles[rings];
+    struct Fill myFill;
+    struct Stroke myStroke;
+    setStroke(&myStroke, 0, 0, 0, 2, 1.0);
+    setFill(&myFill, 0, 0, 0, 0);
+    romain_aaron_getData(&myLines[0], &myCircles[0], cx_in, cy_in, cr_in, steps, rings);
+    romain_aaron_drawImage(myLines, myCircles, myStroke, myFill, steps, rings);
+}
+
+
+// MAIN FUNCTIONS //
 void drawImage(int i, int j, struct Student myStudent, int x)
 {
     float cx_in      = j*cellSize+myStudent.size*cellSize/2;
@@ -249,22 +316,7 @@ void drawImage(int i, int j, struct Student myStudent, int x)
     {
         case 0:
             {
-                drawCircle(cx_in, cy_in, cr_in, 255, 0, 0, 1.0, 0, 0, 0, 1.0, 2); //Get_Data function and Draw_Data function
-                break;
-            }
-        case 1:
-            {
-                drawCircle(cx_in, cy_in, cr_in, 0, 255, 0, 1.0, 0, 0, 0, 1.0, 2);
-                break;
-            }
-        case 2:
-            {
-                drawCircle(cx_in, cy_in, cr_in, 0, 0, 255, 1.0, 0, 0, 0, 1.0, 2);
-                break;
-            }
-        case 3:
-            {
-                drawRectangle(rx_in, ry_in, rWidth_in, rHeight_in, 255, 255, 0, 1.0, 0, 0, 0, 1.0, 2);
+                student0(cx_in, cy_in, cr_in, rx_in, ry_in, rWidth_in, rHeight_in);
                 break;
             }
     }
@@ -294,8 +346,8 @@ void main()
             {
                 drawImage(i, j, myStudent[x], x);
                 updatePosition(i,j,matHeight, matWidth, placeMatrix, myStudent[x].size);
-                x++;
-                x=x%4;
+                //x++;
+                //x=x%4;
             }
         }
     }
