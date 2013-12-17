@@ -447,19 +447,62 @@ void student2(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, f
 
 // Student   3
 //  Get Data
-void student3_getData()
+void rachel_simms_getData(struct Circle mycircle[], struct Fill myfill[], int Dim1, int cx, int cy, int radius, int Dim2, int r, int b, int g)
 {
-
+    int i;
+    int j;
+    for (i=0;i<Dim1;i++)
+    {
+        myfill[i].r = r;
+        myfill[i].g = g;
+        myfill[i].b = b;
+        myfill[i].opacity = 1;
+    }
+    for (j=0; j<Dim2; j++)
+    {
+        mycircle[j].x = cx;
+        mycircle[j].y = cy;
+        mycircle[j].r = radius;
+    }
 }
 //  Draw Image
-void student3_drawImage()
+void rachel_simms_drawImage(struct Circle mycircle[], struct Fill myFill[], struct Stroke mystroke)
 {
-
+    int i;
+    for(i=0; i <100; i++)
+    {
+        
+        fprintf(fp,"\n    <circle cx = '%f' cy = '%f' r = '%f'", mycircle[1].x, mycircle[2].y, mycircle[3].r);
+        fprintf(fp," fill = 'rgb(%d, %d, %d)' fill-opacity = '%f'", myFill[1].r, myFill[2].g, myFill[3].b, myFill[4].opacity);
+        fprintf(fp," stroke = 'rgb(%d, %d, %d)' stroke-opacity = '%f'", mystroke.r, mystroke.g, mystroke.b, mystroke.opacity);
+        fprintf(fp," stroke-width = '%d' />", mystroke.width);
+        
+        mycircle[3].r -= 10;
+        myFill[2].g += 10;
+        myFill[3].b +=20;
+        
+    }
+    
 }
 //  Student Main
 void student3(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
 {
-
+    float radius, cx, cy;
+    int g, b, r;
+    
+    struct Circle mycircle[4];
+    struct Fill myFill[4];
+    struct Stroke mystroke;
+    
+    radius = cr_in; //radius
+    cx = cx_in; //x-coordinate
+    cy = cy_in; //y-coordinate
+    g = 25; //green fill
+    b = 0; //blue fill
+    r = 255; //red fill
+    
+    rachel_simms_getData(mycircle, myFill, 4, cx, cy, radius, 4, r, b, g);
+    rachel_simms_drawImage(mycircle, myFill, mystroke);
 }
 
 // Student   4
