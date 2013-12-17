@@ -300,22 +300,70 @@ void student0(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, f
 
 // Student   1
 //  Get Data
-void houghton_bradley_getData(float cx_in, float cy_in, float r_in, struct Circle smiley[], struct Fill smileyFill[], struct Stroke smileyStroke[])
+void houghton_bradley_getData(float cx_in, float cy_in, float r_in, struct Circle *smiley, struct Fill *smileyFill, struct Stroke *smileyStroke)
 {
-    float cx[]={cx_in,cx_in-(r_in/2),cx_in+(r_in/2),cx_in,cx_in};
-    float cy[]={cy_in,cy_in-(r_in/2),cy_in-(r_in/2),cy_in+(r_in/3),cy_in};
-    float r[]={r_in,r_in/6,r_in/6,r_in/2,r_in/2};
-    
-    int redFill[]={255,0,0,255,255};
-    int greenFill[]={255,0,0,255,255};
-    int blueFill[]={0,0,0,255,0};
-    float opacityFill[]={1.0,1.0,1.0,1.0,1.0};
-    
-    int redStroke[]={0,0,0,0,255};
-    int greenStroke[]={0,0,0,0,255};
-    int blueStroke[]={0,0,0,0,0};
-    int widthStroke[]={5,2,2,1,1};
-    float opacityStroke[]={1.0,1.0,1.0,1.0,1.0};
+    smiley[0].x=cx_in;
+    smiley[1].x=cx_in-(r_in/2);
+    smiley[2].x=cx_in+(r_in/2);
+    smiley[3].x=cx_in;
+    smiley[4].x=cx_in;
+    smiley[0].y=cy_in;
+    smiley[1].y=cy_in-(r_in/2);
+    smiley[2].y=cy_in-(r_in/2);
+    smiley[3].y=cy_in+(r_in/3);
+    smiley[4].y=cy_in;
+    smiley[0].r=r_in;
+    smiley[1].r=r_in/6;
+    smiley[2].r=r_in/6;
+    smiley[3].r=r_in/2;
+    smiley[4].r=r_in/2;
+
+    smileyFill[0].r=255;
+    smileyFill[1].r=0;
+    smileyFill[2].r=0;
+    smileyFill[3].r=255;
+    smileyFill[4].r=255;
+    smileyFill[0].g=255;
+    smileyFill[1].g=0;
+    smileyFill[2].g=0;
+    smileyFill[3].g=255;
+    smileyFill[4].g=255;
+    smileyFill[0].b=0;
+    smileyFill[1].b=0;
+    smileyFill[2].b=0;
+    smileyFill[3].b=255;
+    smileyFill[4].b=0;
+    smileyFill[0].opacity=1.0;
+    smileyFill[1].opacity=1.0;
+    smileyFill[2].opacity=1.0;
+    smileyFill[3].opacity=1.0;
+    smileyFill[4].opacity=1.0;
+
+    smileyStroke[0].r=0;
+    smileyStroke[1].r=0;
+    smileyStroke[2].r=0;
+    smileyStroke[3].r=0;
+    smileyStroke[4].r=255;
+    smileyStroke[0].g=0;
+    smileyStroke[1].g=0;
+    smileyStroke[2].g=0;
+    smileyStroke[3].g=0;
+    smileyStroke[4].g=255;
+    smileyStroke[0].b=0;
+    smileyStroke[1].b=0;
+    smileyStroke[2].b=0;
+    smileyStroke[3].b=0;
+    smileyStroke[4].b=0;
+    smileyStroke[0].width=5;
+    smileyStroke[1].width=2;
+    smileyStroke[2].width=2;
+    smileyStroke[3].width=1;
+    smileyStroke[4].width=1;
+    smileyStroke[0].opacity=1.0;
+    smileyStroke[1].opacity=1.0;
+    smileyStroke[2].opacity=1.0;
+    smileyStroke[3].opacity=1.0;
+    smileyStroke[4].opacity=1.0;
 }
 //  Draw Image
 void houghton_bradley_drawImage(struct Circle myCircle[], struct Fill myFill[], struct Stroke myStroke[])
@@ -324,15 +372,17 @@ void houghton_bradley_drawImage(struct Circle myCircle[], struct Fill myFill[], 
     for(i=0;i<5;i++)
     {
         drawCircle(myCircle[i].x, myCircle[i].y, myCircle[i].r, myFill[i].r, myFill[i].g, myFill[i].b, myFill[i].opacity, myStroke[i].r, myStroke[i].g, myStroke[i].b, myStroke[i].opacity, myStroke[i].width);
+    }
+}
 //  Student Main
 void student1(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
 {
     struct Circle smiley[5];
     struct Fill smileyFill[5];
     struct Stroke smileyStroke[5];
-    
-    
-    houghton_bradley_getData(700, 700, 90, smiley, smileyFill, smileyStroke);
+
+
+    houghton_bradley_getData(cx_in, cy_in, cr_in, &smiley, &smileyFill, &smileyStroke);
     houghton_bradley_drawImage(smiley, smileyFill, smileyStroke);
 }
 

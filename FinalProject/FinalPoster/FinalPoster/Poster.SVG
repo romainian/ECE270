@@ -58,6 +58,11 @@
     <circle cx = '100.000000' cy = '100.000000' r = '32.768002' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <circle cx = '100.000000' cy = '100.000000' r = '26.214403' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <circle cx = '100.000000' cy = '100.000000' r = '20.971521' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
+    <circle cx = '300.000000' cy = '100.000000' r = '100.000000' fill = 'rgb(255, 255, 0)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '5' />
+    <circle cx = '250.000000' cy = '50.000000' r = '16.666666' fill = 'rgb(0, 0, 0)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
+    <circle cx = '350.000000' cy = '50.000000' r = '16.666666' fill = 'rgb(0, 0, 0)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
+    <circle cx = '300.000000' cy = '133.333328' r = '50.000000' fill = 'rgb(255, 255, 255)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <circle cx = '300.000000' cy = '100.000000' r = '50.000000' fill = 'rgb(255, 255, 0)' fill-opacity = '1.000000' stroke = 'rgb(255, 255, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
     <line x1 = '100.000000' y1 = '300.000000' x2 = '100.000000' y2 = '400.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <line x1 = '100.000000' y1 = '300.000000' x2 = '87.466675' y2 = '399.211487' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <line x1 = '100.000000' y1 = '300.000000' x2 = '75.131012' y2 = '396.858337' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
@@ -116,6 +121,11 @@
     <circle cx = '100.000000' cy = '300.000000' r = '32.768002' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <circle cx = '100.000000' cy = '300.000000' r = '26.214403' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <circle cx = '100.000000' cy = '300.000000' r = '20.971521' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
+    <circle cx = '300.000000' cy = '300.000000' r = '100.000000' fill = 'rgb(255, 255, 0)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '5' />
+    <circle cx = '250.000000' cy = '250.000000' r = '16.666666' fill = 'rgb(0, 0, 0)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
+    <circle cx = '350.000000' cy = '250.000000' r = '16.666666' fill = 'rgb(0, 0, 0)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
+    <circle cx = '300.000000' cy = '333.333344' r = '50.000000' fill = 'rgb(255, 255, 255)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <circle cx = '300.000000' cy = '300.000000' r = '50.000000' fill = 'rgb(255, 255, 0)' fill-opacity = '1.000000' stroke = 'rgb(255, 255, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
     <line x1 = '100.000000' y1 = '500.000000' x2 = '100.000000' y2 = '600.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <line x1 = '100.000000' y1 = '500.000000' x2 = '87.466675' y2 = '599.211487' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <line x1 = '100.000000' y1 = '500.000000' x2 = '75.131012' y2 = '596.858337' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
@@ -174,6 +184,11 @@
     <circle cx = '100.000000' cy = '500.000000' r = '32.768002' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <circle cx = '100.000000' cy = '500.000000' r = '26.214403' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <circle cx = '100.000000' cy = '500.000000' r = '20.971521' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
+    <circle cx = '300.000000' cy = '500.000000' r = '100.000000' fill = 'rgb(255, 255, 0)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '5' />
+    <circle cx = '250.000000' cy = '450.000000' r = '16.666666' fill = 'rgb(0, 0, 0)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
+    <circle cx = '350.000000' cy = '450.000000' r = '16.666666' fill = 'rgb(0, 0, 0)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
+    <circle cx = '300.000000' cy = '533.333313' r = '50.000000' fill = 'rgb(255, 255, 255)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <circle cx = '300.000000' cy = '500.000000' r = '50.000000' fill = 'rgb(255, 255, 0)' fill-opacity = '1.000000' stroke = 'rgb(255, 255, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
     <line x1 = '100.000000' y1 = '700.000000' x2 = '100.000000' y2 = '800.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <line x1 = '100.000000' y1 = '700.000000' x2 = '87.466675' y2 = '799.211487' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <line x1 = '100.000000' y1 = '700.000000' x2 = '75.131012' y2 = '796.858337' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
@@ -232,6 +247,11 @@
     <circle cx = '100.000000' cy = '700.000000' r = '32.768002' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <circle cx = '100.000000' cy = '700.000000' r = '26.214403' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <circle cx = '100.000000' cy = '700.000000' r = '20.971521' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
+    <circle cx = '300.000000' cy = '700.000000' r = '100.000000' fill = 'rgb(255, 255, 0)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '5' />
+    <circle cx = '250.000000' cy = '650.000000' r = '16.666666' fill = 'rgb(0, 0, 0)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
+    <circle cx = '350.000000' cy = '650.000000' r = '16.666666' fill = 'rgb(0, 0, 0)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
+    <circle cx = '300.000000' cy = '733.333313' r = '50.000000' fill = 'rgb(255, 255, 255)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <circle cx = '300.000000' cy = '700.000000' r = '50.000000' fill = 'rgb(255, 255, 0)' fill-opacity = '1.000000' stroke = 'rgb(255, 255, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
     <line x1 = '100.000000' y1 = '900.000000' x2 = '100.000000' y2 = '1000.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <line x1 = '100.000000' y1 = '900.000000' x2 = '87.466675' y2 = '999.211487' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <line x1 = '100.000000' y1 = '900.000000' x2 = '75.131012' y2 = '996.858337' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
@@ -290,4 +310,9 @@
     <circle cx = '100.000000' cy = '900.000000' r = '32.768002' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <circle cx = '100.000000' cy = '900.000000' r = '26.214403' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
     <circle cx = '100.000000' cy = '900.000000' r = '20.971521' fill = 'rgb(0, 0, 0)' fill-opacity = '0.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
+    <circle cx = '300.000000' cy = '900.000000' r = '100.000000' fill = 'rgb(255, 255, 0)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '5' />
+    <circle cx = '250.000000' cy = '850.000000' r = '16.666666' fill = 'rgb(0, 0, 0)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
+    <circle cx = '350.000000' cy = '850.000000' r = '16.666666' fill = 'rgb(0, 0, 0)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '2' />
+    <circle cx = '300.000000' cy = '933.333313' r = '50.000000' fill = 'rgb(255, 255, 255)' fill-opacity = '1.000000' stroke = 'rgb(0, 0, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
+    <circle cx = '300.000000' cy = '900.000000' r = '50.000000' fill = 'rgb(255, 255, 0)' fill-opacity = '1.000000' stroke = 'rgb(255, 255, 0)' stroke-opacity = '1.000000' stroke-width = '1' />
 </svg>
