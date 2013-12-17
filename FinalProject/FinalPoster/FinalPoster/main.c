@@ -507,19 +507,61 @@ void student3(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, f
 
 // Student   4
 //  Get Data
-void student4_getData()
-{
 
+void chadGetData(float cx_in, float cy_in, float r_in, struct Circle *myCircle, struct Fill *myFill, struct Stroke myStroke)
+{
+    int i;
+    
+    for(i = 0; i < 10; i++)
+    {
+        myCircle[i].r = r_in;
+        myCircle[i].x = cx_in;
+        myCircle[i].y = cy_in;
+        myFill[i].r = 0;
+        myFill[i].g = rand() % 256;
+        myFill[i].b = 0;
+        myFill[i].opacity = 1.0;
+        myStroke.r = 0;
+        myStroke.g = 0;
+        myStroke.b = 0;
+        myStroke.opacity = 1.0;
+        myStroke.width = 2.0;
+        
+        
+        r_in -= 5;
+        cy_in -= 5;
+        myFill[i + 1].r = myFill[i].r + rand() % 31;
+        myFill[i + 1].b = myFill[i].r + rand() % 31;
+        
+    }
 }
 //  Draw Image
-void student4_drawImage()
-{
 
+void drawChadCircle(struct Circle myCircle[], struct Fill myFill[], struct Stroke myStroke)
+{
+    int i;
+    
+    for(i = 0; i < 10; i++)
+    {
+        fprintf(fp,"\n    <circle cx = '%f' cy = '%f' r = '%f'", myCircle[i].x, myCircle[i].y, myCircle[i].r);
+        fprintf(fp," fill = 'rgb(%d, %d, %d)' fill-opacity = '%f'",
+                myFill[i].r, myFill[i].g, myFill[i].b, myFill[i].opacity);
+        fprintf(fp," stroke = 'rgb(%d, %d, %d)' stroke-opacity = '%f'",
+                myStroke.r, myStroke.g, myStroke.b, myStroke.opacity);
+        fprintf(fp," stroke-width = '%d' />", myStroke.width);
+    }
 }
-//  Student Main
-void student4(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
-{
 
+//  Student Main
+void student3(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+    struct Circle myCircle[10];
+    struct Fill myFill[10];
+    struct Stroke myStroke;
+    
+    chadGetData(cx_in, cy_in, cr_in, myCircle, myFill, myStroke);
+    drawChadCircle(myCircle, myFill, myStroke);
+    
 }
 
 // Student   5
