@@ -553,7 +553,7 @@ void drawChadCircle(struct Circle myCircle[], struct Fill myFill[], struct Strok
 }
 
 //  Student Main
-void student3(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+void student4(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
 {
     struct Circle myCircle[10];
     struct Fill myFill[10];
