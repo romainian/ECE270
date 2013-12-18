@@ -300,7 +300,532 @@ void student0(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, f
 
 // Student   1
 //  Get Data
+<<<<<<< HEAD
 void houghton_bradley_getData(float cx_in, float cy_in, float r_in, struct Circle smiley[], struct Fill smileyFill[], struct Stroke smileyStroke[])
+=======
+void houghton_bradley_getData(float cx_in, float cy_in, float r_in, struct Circle *smiley, struct Fill *smileyFill, struct Stroke *smileyStroke)
+{
+    smiley[0].x=cx_in;
+    smiley[1].x=cx_in-(r_in/2);
+    smiley[2].x=cx_in+(r_in/2);
+    smiley[3].x=cx_in;
+    smiley[4].x=cx_in;
+    smiley[0].y=cy_in;
+    smiley[1].y=cy_in-(r_in/2);
+    smiley[2].y=cy_in-(r_in/2);
+    smiley[3].y=cy_in+(r_in/3);
+    smiley[4].y=cy_in;
+    smiley[0].r=r_in;
+    smiley[1].r=r_in/6;
+    smiley[2].r=r_in/6;
+    smiley[3].r=r_in/2;
+    smiley[4].r=r_in/2;
+
+    smileyFill[0].r=255;
+    smileyFill[1].r=0;
+    smileyFill[2].r=0;
+    smileyFill[3].r=255;
+    smileyFill[4].r=255;
+    smileyFill[0].g=255;
+    smileyFill[1].g=0;
+    smileyFill[2].g=0;
+    smileyFill[3].g=255;
+    smileyFill[4].g=255;
+    smileyFill[0].b=0;
+    smileyFill[1].b=0;
+    smileyFill[2].b=0;
+    smileyFill[3].b=255;
+    smileyFill[4].b=0;
+    smileyFill[0].opacity=1.0;
+    smileyFill[1].opacity=1.0;
+    smileyFill[2].opacity=1.0;
+    smileyFill[3].opacity=1.0;
+    smileyFill[4].opacity=1.0;
+
+    smileyStroke[0].r=0;
+    smileyStroke[1].r=0;
+    smileyStroke[2].r=0;
+    smileyStroke[3].r=0;
+    smileyStroke[4].r=255;
+    smileyStroke[0].g=0;
+    smileyStroke[1].g=0;
+    smileyStroke[2].g=0;
+    smileyStroke[3].g=0;
+    smileyStroke[4].g=255;
+    smileyStroke[0].b=0;
+    smileyStroke[1].b=0;
+    smileyStroke[2].b=0;
+    smileyStroke[3].b=0;
+    smileyStroke[4].b=0;
+    smileyStroke[0].width=5;
+    smileyStroke[1].width=2;
+    smileyStroke[2].width=2;
+    smileyStroke[3].width=1;
+    smileyStroke[4].width=1;
+    smileyStroke[0].opacity=1.0;
+    smileyStroke[1].opacity=1.0;
+    smileyStroke[2].opacity=1.0;
+    smileyStroke[3].opacity=1.0;
+    smileyStroke[4].opacity=1.0;
+}
+//  Draw Image
+void houghton_bradley_drawImage(struct Circle myCircle[], struct Fill myFill[], struct Stroke myStroke[])
+{
+    int i;
+    for(i=0;i<5;i++)
+    {
+        drawCircle(myCircle[i].x, myCircle[i].y, myCircle[i].r, myFill[i].r, myFill[i].g, myFill[i].b, myFill[i].opacity, myStroke[i].r, myStroke[i].g, myStroke[i].b, myStroke[i].opacity, myStroke[i].width);
+    }
+}
+//  Student Main
+void student1(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+    struct Circle smiley[5];
+    struct Fill smileyFill[5];
+    struct Stroke smileyStroke[5];
+
+
+    houghton_bradley_getData(cx_in, cy_in, cr_in, &smiley, &smileyFill, &smileyStroke);
+    houghton_bradley_drawImage(smiley, smileyFill, smileyStroke);
+}
+
+// Student   2
+//  Get Data
+void evan_pietraniec_getData(struct Fill fill[], struct Stroke stroke[], struct Rect rect[], float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+    int i;
+    for(i=0;i<100;i++)
+    {
+        fill[i].r = rand()%256;
+        fill[i].g = rand()%256;
+        fill[i].b = rand()%256;
+        fill[i].opacity = 1;
+    }
+    for(i=0;i<100;i++)
+    {
+        stroke[i].r = rand()%256;
+        stroke[i].g = rand()%256;
+        stroke[i].b = rand()%256;
+        stroke[i].width = 1 + rand()%3;
+        stroke[i].opacity = 1;
+    }
+    int j,k;
+    for(i=0;i<100;i++)
+    {
+        for(j=0;j<10;j++)
+        {
+            for(k=0;k<10;k++)
+            {
+                rect[i].x = rx_in + ((cellSize/5)*j);
+                rect[i].y = ry_in + ((cellSize/5)*k);
+                rect[i].height = (cellSize/5);
+                rect[i].width = (cellSize/5);
+                i++;
+            }
+        }
+    }
+}
+//  Draw Image
+void evan_pietraniec_drawImage(struct Fill fill[], struct Stroke stroke[], struct Rect rect[])
+{
+    int i;
+    for (i=0; i<100; i++)
+    {
+        fprintf(fp,"\n    <rect x = '%f' y = '%f' width = '%f' height = '%f'", rect[i].x, rect[i].y, rect[i].width, rect[i].height);
+        fprintf(fp," fill = 'rgb(%d, %d, %d)' fill-opacity = '%f'", fill[i].r, fill[i].g, fill[i].b, fill[i].opacity);
+        fprintf(fp," stroke = 'rgb(%d, %d, %d)' stroke-opacity = '%f'", stroke[i].r, stroke[i].g, stroke[i].b, stroke[i].opacity);
+        fprintf(fp," stroke-width = '%d' />", stroke[i].width);
+    }
+}
+//  Student Main
+void student2(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+    struct Fill evFill[100];
+    struct Stroke evStroke[100];
+    struct Rect evRect[100];
+    
+    evan_pietraniec_getData(evFill, evStroke, evRect, rx_in, ry_in, rWidth_in, rHeight_in);
+    evan_pietraniec_drawImage(evFill, evStroke, evRect);
+}
+
+// Student   3
+//  Get Data
+void rachel_simms_getData(struct Circle mycircle[], struct Fill myfill[], int Dim1, int cx, int cy, int radius, int Dim2, int r, int b, int g)
+{
+    int i;
+    int j;
+    for (i=0;i<Dim1;i++)
+    {
+        myfill[i].r = r;
+        myfill[i].g = g;
+        myfill[i].b = b;
+        myfill[i].opacity = 1;
+    }
+    for (j=0; j<Dim2; j++)
+    {
+        mycircle[j].x = cx;
+        mycircle[j].y = cy;
+        mycircle[j].r = radius;
+    }
+}
+//  Draw Image
+void rachel_simms_drawImage(struct Circle mycircle[], struct Fill myFill[], struct Stroke mystroke)
+{
+    int i;
+    for(i=0; i <100; i++)
+    {
+        
+        fprintf(fp,"\n    <circle cx = '%f' cy = '%f' r = '%f'", mycircle[1].x, mycircle[2].y, mycircle[3].r);
+        fprintf(fp," fill = 'rgb(%d, %d, %d)' fill-opacity = '%f'", myFill[1].r, myFill[2].g, myFill[3].b, myFill[4].opacity);
+        fprintf(fp," stroke = 'rgb(%d, %d, %d)' stroke-opacity = '%f'", mystroke.r, mystroke.g, mystroke.b, mystroke.opacity);
+        fprintf(fp," stroke-width = '%d' />", mystroke.width);
+        
+        mycircle[3].r -= 10;
+        myFill[2].g += 10;
+        myFill[3].b +=20;
+        
+    }
+    
+}
+//  Student Main
+void student3(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+    float radius, cx, cy;
+    int g, b, r;
+    
+    struct Circle mycircle[4];
+    struct Fill myFill[4];
+    struct Stroke mystroke;
+    
+    radius = cr_in; //radius
+    cx = cx_in; //x-coordinate
+    cy = cy_in; //y-coordinate
+    g = 25; //green fill
+    b = 0; //blue fill
+    r = 255; //red fill
+    
+    rachel_simms_getData(mycircle, myFill, 4, cx, cy, radius, 4, r, b, g);
+    rachel_simms_drawImage(mycircle, myFill, mystroke);
+}
+
+// Student   4
+//  Get Data
+
+void chadGetData(float cx_in, float cy_in, float r_in, struct Circle *myCircle, struct Fill *myFill, struct Stroke myStroke)
+{
+    int i;
+    
+    for(i = 0; i < 10; i++)
+    {
+        myCircle[i].r = r_in;
+        myCircle[i].x = cx_in;
+        myCircle[i].y = cy_in;
+        myFill[i].r = 0;
+        myFill[i].g = rand() % 256;
+        myFill[i].b = 0;
+        myFill[i].opacity = 1.0;
+        myStroke.r = 0;
+        myStroke.g = 0;
+        myStroke.b = 0;
+        myStroke.opacity = 1.0;
+        myStroke.width = 2.0;
+        
+        
+        r_in -= 5;
+        cy_in -= 5;
+        myFill[i + 1].r = myFill[i].r + rand() % 31;
+        myFill[i + 1].b = myFill[i].r + rand() % 31;
+        
+    }
+}
+//  Draw Image
+
+void drawChadCircle(struct Circle myCircle[], struct Fill myFill[], struct Stroke myStroke)
+{
+    int i;
+    
+    for(i = 0; i < 10; i++)
+    {
+        fprintf(fp,"\n    <circle cx = '%f' cy = '%f' r = '%f'", myCircle[i].x, myCircle[i].y, myCircle[i].r);
+        fprintf(fp," fill = 'rgb(%d, %d, %d)' fill-opacity = '%f'",
+                myFill[i].r, myFill[i].g, myFill[i].b, myFill[i].opacity);
+        fprintf(fp," stroke = 'rgb(%d, %d, %d)' stroke-opacity = '%f'",
+                myStroke.r, myStroke.g, myStroke.b, myStroke.opacity);
+        fprintf(fp," stroke-width = '%d' />", myStroke.width);
+    }
+}
+
+//  Student Main
+void student4(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+    struct Circle myCircle[10];
+    struct Fill myFill[10];
+    struct Stroke myStroke;
+    
+    chadGetData(cx_in, cy_in, cr_in, myCircle, myFill, myStroke);
+    drawChadCircle(myCircle, myFill, myStroke);
+    
+}
+
+// Student   5
+//  Get Data
+void student5_getData()
+{
+
+}
+//  Draw Image
+void student5_drawImage()
+{
+
+}
+//  Student Main
+void student5(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+
+}
+
+// Student   6
+//  Get Data
+void student6_getData()
+{
+
+}
+//  Draw Image
+void student6_drawImage()
+{
+
+}
+//  Student Main
+void student6(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+
+}
+
+// Student   7
+//  Get Data
+void student7_getData()
+{
+
+}
+//  Draw Image
+void student7_drawImage()
+{
+
+}
+//  Student Main
+void student7(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+
+}
+
+// Student   8
+//  Get Data
+void student8_getData()
+{
+
+}
+//  Draw Image
+void student8_drawImage()
+{
+
+}
+//  Student Main
+void student8(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+
+}
+
+// Student   9
+//  Get Data
+void student9_getData()
+{
+
+}
+//  Draw Image
+void student9_drawImage()
+{
+
+}
+//  Student Main
+void student9(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+
+}
+
+// Student  10
+//  Get Data
+void student10_getData()
+{
+
+}
+//  Draw Image
+void student10_drawImage()
+{
+
+}
+//  Student Main
+void student10(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+
+}
+
+// Student  11
+//  Get Data
+void student11_getData()
+{
+
+}
+//  Draw Image
+void student11_drawImage()
+{
+
+}
+//  Student Main
+void student11(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+
+}
+
+// Student  12
+//  Get Data
+void student12_getData()
+{
+
+}
+//  Draw Image
+void student12_drawImage()
+{
+
+}
+//  Student Main
+void student12(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+
+}
+
+// Student  13
+//  Get Data
+void student13_getData()
+{
+
+}
+//  Draw Image
+void student13_drawImage()
+{
+
+}
+//  Student Main
+void student13(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+
+}
+
+// Student  14
+//  Get Data
+void student14_getData()
+{
+
+}
+//  Draw Image
+void student14_drawImage()
+{
+
+}
+//  Student Main
+void student14(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+
+}
+
+// Student  15
+//  Get Data
+void student15_getData()
+{
+
+}
+//  Draw Image
+void student15_drawImage()
+{
+
+}
+//  Student Main
+void student15(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+
+}
+
+// Student  16
+//  Get Data
+void student16_getData()
+{
+
+}
+//  Draw Image
+void student16_drawImage()
+{
+
+}
+//  Student Main
+void student16(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+
+}
+
+// Student  17
+//  Get Data
+void student17_getData()
+{
+
+}
+//  Draw Image
+void student17_drawImage()
+{
+
+}
+//  Student Main
+void student17(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+
+}
+
+// Student  18
+//  Get Data
+void student18_getData()
+{
+
+}
+//  Draw Image
+void student18_drawImage()
+{
+
+}
+//  Student Main
+void student18(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+
+}
+
+// Student  19
+//  Get Data
+void student19_getData()
+{
+
+}
+//  Draw Image
+void student19_drawImage()
+{
+
+}
+//  Student Main
+void student19(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
+{
+
+}
+
+// Student  20
+//  Get Data
+void student20_getData()
+>>>>>>> 0bd814fdb3dddcc3f4f60990002965acd4dfdd34
 {
     float cx[]={cx_in,cx_in-(r_in/2),cx_in+(r_in/2),cx_in,cx_in};
     float cy[]={cy_in,cy_in-(r_in/2),cy_in-(r_in/2),cy_in+(r_in/3),cy_in};
