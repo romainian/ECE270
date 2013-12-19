@@ -440,7 +440,7 @@ void student2(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, f
     struct Fill evFill[100];
     struct Stroke evStroke[100];
     struct Rect evRect[100];
-    
+
     evan_pietraniec_getData(evFill, evStroke, evRect, rx_in, ry_in, rWidth_in, rHeight_in);
     evan_pietraniec_drawImage(evFill, evStroke, evRect);
 }
@@ -471,36 +471,36 @@ void rachel_simms_drawImage(struct Circle mycircle[], struct Fill myFill[], stru
     int i;
     for(i=0; i <100; i++)
     {
-        
+
         fprintf(fp,"\n    <circle cx = '%f' cy = '%f' r = '%f'", mycircle[1].x, mycircle[2].y, mycircle[3].r);
         fprintf(fp," fill = 'rgb(%d, %d, %d)' fill-opacity = '%f'", myFill[1].r, myFill[2].g, myFill[3].b, myFill[4].opacity);
         fprintf(fp," stroke = 'rgb(%d, %d, %d)' stroke-opacity = '%f'", mystroke.r, mystroke.g, mystroke.b, mystroke.opacity);
         fprintf(fp," stroke-width = '%d' />", mystroke.width);
-        
+
         mycircle[3].r -= 10;
         myFill[2].g += 10;
         myFill[3].b +=20;
-        
+
     }
-    
+
 }
 //  Student Main
 void student3(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, float rWidth_in, float rHeight_in)
 {
     float radius, cx, cy;
     int g, b, r;
-    
+
     struct Circle mycircle[4];
     struct Fill myFill[4];
     struct Stroke mystroke;
-    
+
     radius = cr_in; //radius
     cx = cx_in; //x-coordinate
     cy = cy_in; //y-coordinate
     g = 25; //green fill
     b = 0; //blue fill
     r = 255; //red fill
-    
+
     rachel_simms_getData(mycircle, myFill, 4, cx, cy, radius, 4, r, b, g);
     rachel_simms_drawImage(mycircle, myFill, mystroke);
 }
@@ -511,7 +511,7 @@ void student3(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, f
 void chadGetData(float cx_in, float cy_in, float r_in, struct Circle *myCircle, struct Fill *myFill, struct Stroke myStroke)
 {
     int i;
-    
+
     for(i = 0; i < 10; i++)
     {
         myCircle[i].r = r_in;
@@ -526,13 +526,13 @@ void chadGetData(float cx_in, float cy_in, float r_in, struct Circle *myCircle, 
         myStroke.b = 0;
         myStroke.opacity = 1.0;
         myStroke.width = 2.0;
-        
-        
+
+
         r_in -= 5;
         cy_in -= 5;
         myFill[i + 1].r = myFill[i].r + rand() % 31;
         myFill[i + 1].b = myFill[i].r + rand() % 31;
-        
+
     }
 }
 //  Draw Image
@@ -540,7 +540,7 @@ void chadGetData(float cx_in, float cy_in, float r_in, struct Circle *myCircle, 
 void drawChadCircle(struct Circle myCircle[], struct Fill myFill[], struct Stroke myStroke)
 {
     int i;
-    
+
     for(i = 0; i < 10; i++)
     {
         fprintf(fp,"\n    <circle cx = '%f' cy = '%f' r = '%f'", myCircle[i].x, myCircle[i].y, myCircle[i].r);
@@ -558,10 +558,10 @@ void student4(float cx_in, float cy_in, float cr_in, float rx_in, float ry_in, f
     struct Circle myCircle[10];
     struct Fill myFill[10];
     struct Stroke myStroke;
-    
+
     chadGetData(cx_in, cy_in, cr_in, myCircle, myFill, myStroke);
     drawChadCircle(myCircle, myFill, myStroke);
-    
+
 }
 
 // Student   5
